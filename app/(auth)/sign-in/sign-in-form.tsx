@@ -41,9 +41,7 @@ const SignInForm = () => {
                     <Input id='password' name='password' type='password' required autoComplete='password' defaultValue={signInDefaultValues.password}/>
                 </div>
                 <div>
-                    <SignInButton className='w-full' variant='default'>
-                        Sign In
-                    </SignInButton>
+                    <SignInButton />
                 </div>
 
                 { data && !data.success && (
