@@ -13,7 +13,6 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Loader } from "lucide-react";
 import { updateUserAddress } from "@/lib/actions/user.actions";
-import { badgeVariants } from "@/components/ui/badge";
 
 const ShippingAddressForm = ({ address }: ShippingAddress) => {
   const router = useRouter();

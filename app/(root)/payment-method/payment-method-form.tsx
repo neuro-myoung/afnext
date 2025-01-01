@@ -3,7 +3,7 @@ import { useRouter } from "next/navigation";
 import { useToast } from "@/hooks/use-toast";
 import { useTransition } from "react";
 import { paymentMethodSchema } from "@/lib/validators";
-import { ControllerRenderProps, useForm } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { PAYMENT_METHODS, DEFAULT_PAYMENT_METHOD } from "@/lib/constants";
