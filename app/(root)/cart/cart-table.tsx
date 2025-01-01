@@ -22,7 +22,7 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const CartTable = ({ cart }: { cart?: Cart }) => {
   const router = useRouter();
-  const toast = useToast();
+  const { toast } = useToast();
   const [isPending, startTransition] = useTransition();
 
   return (
@@ -60,11 +60,11 @@ const CartTable = ({ cart }: { cart?: Cart }) => {
                         <span className="px-2">{item.name}</span>
                       </Link>
                     </TableCell>
-                    <TableCell className="flex-center gap-2">
+                    <TableCell className='flex-center gap-2'>
                       <Button
                         disabled={isPending}
-                        variant="outline"
-                        type="button"
+                        variant='outline'
+                        type='button'
                         onClick={() =>
                           startTransition(async () => {
                             const res = await removeItemFromCart(
@@ -73,7 +73,7 @@ const CartTable = ({ cart }: { cart?: Cart }) => {
 
                             if (!res.success) {
                               toast({
-                                variant: "destructive",
+                                variant: 'destructive',
                                 description: res.message,
                               });
                             }
@@ -97,7 +97,7 @@ const CartTable = ({ cart }: { cart?: Cart }) => {
 
                             if (!res.success) {
                               toast({
-                                variant: "destructive",
+                                variant: 'destructive',
                                 description: res.message,
                               });
                             }
