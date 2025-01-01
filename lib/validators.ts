@@ -1,6 +1,7 @@
 import { z } from "zod";
 import { formatNumberForPrice } from "./utils";
 import { PAYMENT_METHODS } from "./constants";
+import { markCurrentScopeAsDynamic } from "next/dist/server/app-render/dynamic-rendering";
 
 const currency = z
   .string()
@@ -89,3 +90,24 @@ export const paymentMethodSchema = z
     path: ['type'],
     message: 'Invalid payment method',
   });
+
+  // Schema for inserting order
+  export const insertOrderSchema = z.object({
+    userId: z.string().min(2, 'User is required'),
+    itemsPrice: currency,
+    shippingPrice: currency,
+    taxPrice: currency,
+    totalPrice: currency,
+    paymentMethod: z.string().refine((data) => PAYMENT_METHODS.includes(data), {message: 'Invalid payment method'}),
+    shippingAddress: shippingAddressSchema
+  })
+
+  // Schema for inserting an order item
+  export const insertOrderItemSchema = z.object({
+    productId: z.string(),
+    slug: z.string(),
+    image: z.string(),
+    name: z.string(),
+    price: currency,
+    qty: z.number(),
+  })
