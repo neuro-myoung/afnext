@@ -71,7 +71,7 @@ export const insertCartSchema = z.object({
 
 // Schema for the shipping address
 export const shippingAddressSchema = z.object({
-  fullName: z.string().min(3, 'Name must be at least 3 characters'),
+  fullName: z.string().min(2, 'Name must be at least 2 characters'),
   streetAddress: z.string().min(3, 'Address must be at least 3 characters'),
   city: z.string().min(3, 'City must be at least 3 characters'),
   postalCode: z.string().min(3, 'Postal code must be at least 3 characters'),

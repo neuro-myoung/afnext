@@ -14,7 +14,8 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Loader } from "lucide-react";
 import { updateUserAddress } from "@/lib/actions/user.actions";
 
-const ShippingAddressForm = ({ address }: ShippingAddress) => {
+
+const ShippingAddressForm = ({ address }: { address: ShippingAddress }) => {
   const router = useRouter();
   const { toast } = useToast();
 
