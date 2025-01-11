@@ -1,7 +1,6 @@
 import { z } from "zod";
 import { formatNumberForPrice } from "./utils";
 import { PAYMENT_METHODS } from "./constants";
-import { markCurrentScopeAsDynamic } from "next/dist/server/app-render/dynamic-rendering";
 
 const currency = z
   .string()
@@ -110,4 +109,11 @@ export const paymentMethodSchema = z
     name: z.string(),
     price: currency,
     qty: z.number(),
+  })
+
+  export const paymentResultSchema = z.object({
+    id: z.string(),
+    status: z.string(),
+    emailAddress: z.string(),
+    pricePaid: z.string(),
   })
