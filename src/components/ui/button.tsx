@@ -15,17 +15,18 @@ const buttonVariants = cva(
           "bg-destructive text-white shadow-xs hover:bg-destructive/90 focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40 dark:bg-destructive/60",
         outline:
           "border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50",
-        secondary:
-          "bg-secondary text-secondary-foreground shadow-xs hover:bg-secondary/80",
         ghost:
           "hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50",
         link: "text-primary underline-offset-4 hover:underline",
-        primary: "duration-300 ease-in-out text-[1.2rem] ps-8 pe-8 rounded-full cursor-pointer bg-[linear-gradient(0.3turn,#655421,#D4AF37,#e4e4e4,#D4AF37,#655421)] bg-[length:300%_100%] hover:scale-105 focus:scale-105 hover:bg-position-[100%_0] focus:bg-position-[100%_0] text-[#0e0008]"
+        primary: "duration-300 ease-in-out text-[1.2rem] ps-8 pe-8 font-bold rounded-full cursor-pointer bg-[linear-gradient(0.3turn,#655421,#D4AF37,#e4e4e4,#D4AF37,#655421)] bg-[length:300%_100%] hover:scale-105 focus:scale-105 hover:bg-position-[100%_0] focus:bg-position-[100%_0] text-[#0e0008]",
+        secondary: "relative ease-in-out duration-300 text-white text-[1.2rem] bg-[#fff] bg-opacity-0 cursor-pointer rounded-sm outline outline-1 outline-white hover:bg-opacity-20 focus:bg-opacity-20 hover:scale-105 focus:scale-105",
+        navlink: "focus:bg-[#e93e68] hover:bg-[#e93e68] hover:text-accent text-[#c3c3c3] h-full",
       },
       size: {
         default: "h-9 px-4 py-2 has-[>svg]:px-3",
         sm: "h-8 rounded-md gap-1.5 px-3 has-[>svg]:px-2.5",
         lg: "h-10 rounded-md px-6 has-[>svg]:px-4",
+        full: "h-full px-4 rounded-none gap-0",
         icon: "size-9",
       },
     },
