@@ -1,9 +1,11 @@
-import { Button } from "@/components/ui/button"
+import ArtistStatement from "./components/ArtistStatement/ArtistStatement"
+import Hero from "./components/Hero/Hero"
 
 export default function Home() {
   return(
     <div className="min-h-[50vh]">
-      <Button variant="primary">Press</Button>
+      <Hero />
+      <ArtistStatement />
     </div>
   )
 }
