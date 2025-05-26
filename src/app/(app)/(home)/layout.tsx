@@ -9,7 +9,7 @@ const Layout = ({ children }: Props) => {
   return (
     <div className="flex flex-col">
       <Navbar />
-      <div className="flex-1">
+      <div className="flex-1 pt-20">
         { children }
       </div>
       <Footer />

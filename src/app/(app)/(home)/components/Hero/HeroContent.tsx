@@ -3,7 +3,7 @@ import { daniel } from '../../../layout'
 
 const HeroContent = () => {
     return(
-        < div className="grid grid-cols-1 lg:grid-cols-2 max-w-[1600px] px-8 pt-26 lg:pt-0 ">
+        < div className="grid grid-cols-1 lg:grid-cols-2 max-w-[1600px] px-8 lg:pt-0 ">
             <div className='relative justify-center mx-auto text-center lg:text-left flex flex-col items-center lg:items-start w-full h-full'>
                 <h1 className={`relative w-fit tracking-tight text-balance mt-16 font-bold !leading-tight text-white text-5xl md:text-6xl lg:text-7xl ${daniel.className}`}>
                     Vibrant and Realistic Colored Pencil <span className="px-2 text-[#FFC300]">ART</span>
