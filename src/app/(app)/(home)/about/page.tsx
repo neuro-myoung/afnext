@@ -7,7 +7,7 @@ const About = () => {
     <main className="mt-20 lg:mt-0 flex justify-center items-center text-[#0e0008] w-screen min-h-screen bg-[#f2f2f2]">
         <div className="max-w-[1600px] px-2 py-12">
         <h1 className="w-full text-2xl">About Me</h1>
-        <div className="relative before:content-[''] before:absolute before:w-[100%] before:h-[20px] before:l-0 before:t-0 before:border-l-2 before:border-r-2 before:border-t-2 before:border-[#0e0008] after:content-[''] after:absolute after:w-[100%] after:h-[20px] after:r-0 after:b-100 after:border-l-2 after:border-r-2 after:border-b-2 after:border-[#0e0008]">
+        <div className="relative before:content-[''] before:absolute before:w-[100%] before:h-[20px]  before:border-l-2 before:border-r-2 before:border-t-2 before:border-[#0e0008] after:content-[''] after:absolute after:w-[100%] after:h-[20px] before:left-0 before:top-0 after:right-0 after:bottom-0 after:border-l-2 after:border-r-2 after:border-b-2 after:border-[#0e0008]">
           <div className="flex flex-col md:flex-row h-full justify-center items-center py-12 px-8 gap-8">
             <div className="flex flex-col order-last md:order-first w-full max-w-[600px] items-center gap-8 text-[1.2rem] md:px-4">
               <p>
@@ -21,13 +21,13 @@ const About = () => {
               </p>
             </div>
             <div className="px-8 ">
-              <div className="rounded-lg overflow-hidden">
+              <div className="rounded-md overflow-hidden">
                 <Image
                   src="/assets/images/alix_drawing.jpg"
-                  width="500"
-                  height="500"
-                  style={{ objectFit: "contain" }}
-                  sizes="(max-width: 736px) 50%, 50%"
+                  width={500}
+                  height={500}
+                  className="object-contain"
+                  sizes="(max-width: 736px) 50vw, 500px"
                   alt="Image of Alix Fuerst drawing a portrait."
                 />
               </div>
