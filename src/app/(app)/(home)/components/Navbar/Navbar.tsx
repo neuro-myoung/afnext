@@ -6,7 +6,7 @@ import { useState } from 'react'
 
 import { cn } from '@/lib/utils'
 import { Button } from "@/components/ui/button";
-import { NavSidebar } from "./navsidebar";
+import { NavSidebar } from "./Navsidebar";
 
 interface NavbarItemProps {
     href: string;
