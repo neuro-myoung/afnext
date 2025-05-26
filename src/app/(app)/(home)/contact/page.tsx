@@ -52,7 +52,7 @@ const Commission = () => {
                     <Image
                       src="/assets/images/BadPhoto.jpeg"
                       fill={true}
-                      alt=""
+                      alt="Example of bad photo reference: poor lighting, subject looking away"
                     />
                   </div>
                   <div className="w-full flex-col justify-center items-center text-center mt-6">
@@ -65,7 +65,7 @@ const Commission = () => {
                     <Image
                       src="/assets/images/GoodPhoto.jpeg"
                       fill={true}
-                      alt=""
+                      alt="Example of good photo reference: natural lighting, subject looking at camera"
                     />
                   </div>
                   <div className="w-full flex-col justify-center items-center text-center mt-6">
@@ -80,7 +80,7 @@ const Commission = () => {
                     <Image
                       src="/assets/images/PhotoVsDrawing.jpg"
                       fill={true}
-                      alt=""
+                      alt="Comparison: photo versus drawing reference quality"
                     />
                   </div>
                   <div className="w-full flex-col justify-center items-center text-center mt-6">
