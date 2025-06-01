@@ -18,7 +18,7 @@ const NavbarItem = ({
     href,
     children,
     isActive
-}) => {
+}:NavbarItemProps) => {
     return (
         <Button 
             asChild

@@ -4,7 +4,6 @@ import { Switch } from "@/components/ui/switch";
 import {
   Table,
   TableBody,
-  TableCaption,
   TableCell,
   TableHead,
   TableHeader,

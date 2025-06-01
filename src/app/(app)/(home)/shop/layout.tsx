@@ -1,8 +1,8 @@
 import configPromise from "@payload-config";
-import { getPayload, withNullableJSONSchemaType } from "payload";
+import { getPayload} from "payload";
 import { Category } from '@/payload-types'
 
-import { SearchFilters } from "./seach-filters";
+import { SearchFilters } from "./search-filters";
 import { CustomCategory } from "../types";
 
 interface Props {
