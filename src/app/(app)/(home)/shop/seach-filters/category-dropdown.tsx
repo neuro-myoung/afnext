@@ -5,6 +5,7 @@ import { Category } from "@/payload-types";
 import { useState, useRef } from "react";
 import { useDropdown } from "./useDropdown";
 import { SubcategoryMenu } from "./subcategory-menu";
+import Link from "next/link";
 
 interface Props {
   category: Category;
@@ -48,7 +49,9 @@ export const CategoryDropdown = ({
             isActive && !isNavigationHovered && "bg-white/50 text-white"
           )}
         >
+          <Link href={`/${category.slug}`}>
           {category.name}
+          </Link>
         </Button>
         {category.subcategories && category.subcategories.length > 0 && (
           <div
