@@ -4,7 +4,7 @@ import { ThumbsDown, ThumbsUp, Laugh } from "lucide-react";
 
 const Commission = () => {
   return (
-    <main className="flex flex-col text-[#0e0008] w-screen min-h-screen h-auto justify-center items-center bg-[#f2f2f2] px-12 py-64">
+    <main className="flex flex-col text-[#0e0008] w-screen min-h-screen h-auto justify-center items-center bg-[#f0e6db] px-12 py-64">
       <div className="max-w-[1600px]">
         <h1 className="w-full text-2xl">Connect</h1>
         <div className="relative w-full h-auto before:content-[''] before:absolute before:w-[100%] before:h-[20px] before:l-0 before:t-0 before:border-l-2 before:border-r-2 before:border-t-2 before:border-[#0e0008] after:content-[''] after:absolute after:w-[100%] after:h-[20px] after:r-0 after:b-100 after:border-l-2 after:border-r-2 after:border-b-2 after:border-[#0e0008]">

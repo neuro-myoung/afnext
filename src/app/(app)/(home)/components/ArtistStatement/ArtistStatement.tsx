@@ -6,7 +6,7 @@ const txt =
 
 export default function ArtistStatement() {
   return (
-    <div className="bg-[#e2e2e2]">
+    <div className="bg-[#f0e6db] relative">
       <div className="w-full flex justify-center items-center h-full py-50">
         <TextReveal value={txt} />
       </div>

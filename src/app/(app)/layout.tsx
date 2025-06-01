@@ -1,16 +1,17 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Nunito } from 'next/font/google'
-import localFont from 'next/font/local'
+import { Manrope, Marcellus } from 'next/font/google'
 
-const nunito = Nunito({
-  weight: ['200','300','400','700'],
+const manrope = Manrope({
+  weight: ['200','300','400','700', '800'],
   subsets: ['latin'],
-  variable: '--font-lato',
+  variable: '--font-manrope',
 })
 
-export const daniel = localFont({
-  src: '../../../public/font/Daniel-Bold.otf'
+export const marcellus = Marcellus({
+  weight: '400',
+  subsets: ['latin'],
+  variable: '--font-marcellus',
 })
 
 export const metadata: Metadata = {
@@ -26,7 +27,7 @@ export default function RootLayout({
   return (
     <html 
       lang="en"
-      className={`${nunito.className} antialiased`}>
+      className={`${manrope.className} antialiased`}>
       <body>
         {children}
       </body>
