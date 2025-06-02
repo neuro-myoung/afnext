@@ -1,42 +1,23 @@
-import configPromise from "@payload-config";
-import { getPayload} from "payload";
-import { Category } from '@/payload-types'
-
 import { SearchFilters } from "./search-filters";
-import { CustomCategory } from "../types";
+import { getQueryClient, trpc } from "@/trpc/server";
+import { HydrateClient } from "@/trpc/server";
+import { Suspense } from "react";
 
 interface Props {
   children: React.ReactNode;
 }
 
 const Layout = async ({ children }: Props) => {
-  const payload = await getPayload({
-    config: configPromise,
-  });
-
-  const data = await payload.find({
-    collection: "categories",
-    depth: 1,
-    pagination: false,
-    where: {
-      parent: {
-        exists: false,
-      },
-    },
-    sort: "name",
-  });
-
-  const formattedData: CustomCategory[] = data.docs.map((doc) => ({
-    ...doc,
-    // Because of depth: 1 we can be confident doc will always be a Category
-    subcategories: (doc.subcategories?.docs ?? []).map((doc) => ({...(doc as Category), 
-      sucategories:undefined,
-    }))
-  }))
+  const queryClient = getQueryClient();
+  void queryClient.prefetchQuery(trpc.categories.getMany.queryOptions());
 
   return (
     <div>
-      <SearchFilters data={formattedData} />
+      <HydrateClient>
+        <Suspense fallback={<p>Loading...</p>}>
+        <SearchFilters />
+        </Suspense>
+      </HydrateClient>
       {children}
     </div>
   );
