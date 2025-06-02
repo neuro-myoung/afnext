@@ -13,8 +13,13 @@ const t = initTRPC.create({
 
 export const createTRPCRouter = t.router;
 export const createCallerFactory = t.createCallerFactory;
+const getPayloadInstance = cache(() => getPayload({ config }));
 export const baseProcedure = t.procedure.use(async ({ next }) => {
-    const payload = await getPayload({ config });
-
-    return next({ctx: { payload }});
+    try {
+        const payload = await getPayloadInstance();
+        return next({ ctx: { payload } });
+   } catch (error) {
+        console.error('Failed to get Payload instance:', error);
+        throw new Error('Internal server error');
+    }
 });
