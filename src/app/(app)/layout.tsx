@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Manrope, Marcellus } from 'next/font/google'
+import { TRPCReactProvider } from "@/trpc/client";
 
 const manrope = Manrope({
   weight: ['200','300','400','700', '800'],
@@ -29,7 +30,9 @@ export default function RootLayout({
       lang="en"
       className={`${manrope.className} antialiased`}>
       <body>
+        <TRPCReactProvider>
         {children}
+        </TRPCReactProvider>
       </body>
     </html>
   );
