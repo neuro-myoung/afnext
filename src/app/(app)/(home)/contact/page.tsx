@@ -1,6 +1,7 @@
 import Image from "next/image";
-import PriceTable from "../components/PriceTable/PriceTable";
+import PriceTable from "../_components/PriceTable/PriceTable";
 import { ThumbsDown, ThumbsUp, Laugh } from "lucide-react";
+import { ContactForm } from "../_components/ContactForm/ContactForm";
 
 const Commission = () => {
   return (
@@ -8,7 +9,28 @@ const Commission = () => {
       <div className="max-w-[1600px]">
         <h1 className="w-full text-2xl">Connect</h1>
         <div className="relative w-full h-auto before:content-[''] before:absolute before:w-[100%] before:h-[20px] before:l-0 before:t-0 before:border-l-2 before:border-r-2 before:border-t-2 before:border-[#0e0008] after:content-[''] after:absolute after:w-[100%] after:h-[20px] after:r-0 after:b-100 after:border-l-2 after:border-r-2 after:border-b-2 after:border-[#0e0008]">
-          <div className="flex flex-col gap-24 py-6 px-8">
+          <div className="flex flex-col gap-4 py-12 px-8">
+            <p className="w-full lg:w-[60%]">
+              Feel free to reach out with inquiries or to commission original
+              artwork. More information on pet and people portraits can be found
+              below. Other types of commissions can be discussed on a case by
+              cases basis.
+            </p>
+            <div className="flex flex-col lg:flex-row w-full gap-6 mb-24 align-center">
+              <div className="w-full lg:w-[60%]">
+              <ContactForm />
+              </div>
+              <div className="rounded-md overflow-hidden flex justify-center align-center max-h-[500px] m-auto">
+                <Image
+                  src="/assets/images/alix_drawing.jpg"
+                  width={500}
+                  height={500}
+                  className="object-contain"
+                  sizes="(max-width: 736px) 50vw, 500px"
+                  alt="Image of Alix Fuerst drawing a portrait."
+                />
+              </div>
+            </div>
             <div className="grid grid-cols-2 gap-12">
               <div className="w-full justify-center flex gap-6">
                 <div className="flex flex-col gap-8 max-w-[600px]">
